@@ -1,9 +1,0 @@
-com\lx\mybatis\MyExecutor.class
-com\lx\mybatis\PersonMapper.class
-com\lx\mybatis\MySqlSession.class
-com\lx\mybatis\Executor.class
-com\lx\mybatis\Person.class
-com\lx\mybatis\MyTypeHandler.class
-com\lx\mybatis\MapperProxy.class
-com\lx\mybatis\PersonMapperXml.class
-com\lx\mybatis\DBUtil.class
