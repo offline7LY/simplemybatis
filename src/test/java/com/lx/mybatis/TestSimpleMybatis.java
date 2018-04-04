@@ -1,5 +1,9 @@
 package com.lx.mybatis;
 
+import com.lx.mybatis.mapper.PersonMapper;
+import com.lx.mybatis.model.Person;
+import com.lx.mybatis.session.MySqlSession;
+
 public class TestSimpleMybatis {
 
     @org.junit.Test

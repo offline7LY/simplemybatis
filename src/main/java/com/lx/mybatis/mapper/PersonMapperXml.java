@@ -1,12 +1,12 @@
-package com.lx.mybatis;
+package com.lx.mybatis.mapper;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class PersonMapperXml {
-    public static final String nameSpace = "com.lx.mybatis.PersonMapper";
+    public static final String nameSpace = "com.lx.mybatis.mapper.PersonMapper";
 
-    public static final Map<String, String> methodSqlMapping = new HashMap<String, String>();
+    public static final Map<String, String> methodSqlMapping = new HashMap<>();
 
     static {
         methodSqlMapping.put("selectByPrimaryKey", "select * from t_person where id = ?");

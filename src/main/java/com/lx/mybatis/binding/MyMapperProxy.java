@@ -1,4 +1,7 @@
-package com.lx.mybatis;
+package com.lx.mybatis.binding;
+
+import com.lx.mybatis.mapper.PersonMapperXml;
+import com.lx.mybatis.session.MySqlSession;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -9,7 +12,7 @@ import java.lang.reflect.Method;
  */
 public class MyMapperProxy implements InvocationHandler {
 
-    private MySqlSession mySqlSession;
+    private final MySqlSession mySqlSession;
 
     public <T> MyMapperProxy(MySqlSession mySqlSession, Class<T> mapperClass) {
         this.mySqlSession = mySqlSession;

@@ -1,4 +1,4 @@
-package com.lx.mybatis;
+package com.lx.mybatis.model;
 
    /**
     * t_person 实体类

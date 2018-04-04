@@ -1,4 +1,4 @@
-package com.lx.mybatis;
+package com.lx.mybatis.util;
 
 import java.io.InputStream;
 import java.sql.*;
@@ -8,10 +8,10 @@ import java.util.Properties;
  * 数据库连接工具类
  */
 public class DBUtil {
-    private static String jdbcUrl = "";
-    private static String driverClass = "";
-    private static String username = "";
-    private static String password = "";
+    private static final String jdbcUrl;
+    private static final String driverClass;
+    private static final String username;
+    private static final String password;
 
     /**
      * 读取数据库配置文件信息

@@ -1,4 +1,6 @@
-package com.lx.mybatis;
+package com.lx.mybatis.mapper;
+
+import com.lx.mybatis.model.Person;
 
 public interface PersonMapper {
     int deleteByPrimaryKey(Integer id);

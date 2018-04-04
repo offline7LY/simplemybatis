@@ -1,4 +1,7 @@
-package com.lx.mybatis;
+package com.lx.mybatis.executor;
+
+import com.lx.mybatis.model.Person;
+import com.lx.mybatis.util.DBUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -34,7 +37,7 @@ public class MyExecutor implements Executor{
                 person.setName(resultSet.getString("name"));
             }
         } catch (SQLException e) {
-
+            e.printStackTrace();
         }
 
         //执行sql
