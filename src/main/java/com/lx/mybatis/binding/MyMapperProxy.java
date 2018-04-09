@@ -14,7 +14,7 @@ public class MyMapperProxy implements InvocationHandler {
 
     private final MySqlSession mySqlSession;
 
-    public <T> MyMapperProxy(MySqlSession mySqlSession, Class<T> mapperClass) {
+    public <T> MyMapperProxy(MySqlSession mySqlSession) {
         this.mySqlSession = mySqlSession;
     }
 

@@ -1,12 +1,11 @@
 package com.lx.mybatis.executor;
 
 import com.lx.mybatis.model.Person;
+import com.lx.mybatis.resultset2object.MyResultSetHandler;
 import com.lx.mybatis.util.DBUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 /**
  * 真正跟数据库打交道的类
@@ -30,13 +29,16 @@ public class MyExecutor implements Executor{
             Connection conn = DBUtil.getConn();
             PreparedStatement pStmt = DBUtil.getPStmt(conn, sql);
             pStmt.setInt(1, Integer.parseInt(String.valueOf(parameter)));
-            ResultSet resultSet = pStmt.executeQuery();
 
-            while (resultSet.next()){
-                person.setId(resultSet.getInt("id"));
-                person.setName(resultSet.getString("name"));
-            }
-        } catch (SQLException e) {
+            //result如何动态转换不用手动射
+//            ResultSet resultSet = pStmt.executeQuery();
+//            new MyResultSetHandler().handle(resultSet, person);
+//            while (resultSet.next()){
+//                person.setId(resultSet.getInt("id"));
+//                person.setName(resultSet.getString("name"));
+//            }
+            new MyResultSetHandler().handle(pStmt, person);
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

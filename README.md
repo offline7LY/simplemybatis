@@ -14,3 +14,8 @@ Myexecutor->mySqlsession:return
 mySqlsession->myMapperproxy:return
 myMapperproxy->client:
 ```
+
+### simplemybatis v2.0
++ 添加缓存处理 MyCacheExecutor, 有缓存先从缓存取
++ 模拟mybatis获取mapperproxy的处理, 通过MyConfiguration一步步获取, 最终通过register返回,sqlSession全程需要传递
++ 添加MyResultSetHandler类, 将jdbc返回的结果集转换为java对象

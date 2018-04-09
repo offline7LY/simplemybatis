@@ -13,8 +13,8 @@ public class DBUtil {
     private static final String username;
     private static final String password;
 
-    /**
-     * 读取数据库配置文件信息
+    /*
+      读取数据库配置文件信息
      */
     static {
         // 使用properties读取配置文件
@@ -37,8 +37,8 @@ public class DBUtil {
         password = prop.getProperty("password");
     }
 
-    /**
-     * 加载数据库驱动
+    /*
+      加载数据库驱动
      */
     static {
         try {

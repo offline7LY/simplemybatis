@@ -8,15 +8,12 @@ package com.lx.mybatis.model;
 
 public class Person{
 	private Integer id;
-	private java.util.Date datacreated;
 	private String account;
 	private String password;
 	private String sex;
 	private String name;
-	private java.util.Date birthday;
 	private String email;
 	private String ipcreated;
-	private java.util.Date datelastactived;
 	private String iplastactived;
 	private Integer type;
 	private String picture;
@@ -25,12 +22,6 @@ public class Person{
 	}
 	public Integer getId(){
 		return id;
-	}
-	public void setDatacreated(java.util.Date datacreated){
-		this.datacreated=datacreated;
-	}
-	public java.util.Date getDatacreated(){
-		return datacreated;
 	}
 	public void setAccount(String account){
 		this.account=account;
@@ -56,12 +47,6 @@ public class Person{
 	public String getName(){
 		return name;
 	}
-	public void setBirthday(java.util.Date birthday){
-		this.birthday=birthday;
-	}
-	public java.util.Date getBirthday(){
-		return birthday;
-	}
 	public void setEmail(String email){
 		this.email=email;
 	}
@@ -73,12 +58,6 @@ public class Person{
 	}
 	public String getIpcreated(){
 		return ipcreated;
-	}
-	public void setDatelastactived(java.util.Date datelastactived){
-		this.datelastactived=datelastactived;
-	}
-	public java.util.Date getDatelastactived(){
-		return datelastactived;
 	}
 	public void setIplastactived(String iplastactived){
 		this.iplastactived=iplastactived;
