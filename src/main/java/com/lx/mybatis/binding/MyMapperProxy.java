@@ -13,17 +13,20 @@ import java.lang.reflect.Method;
 public class MyMapperProxy implements InvocationHandler {
 
     private final MySqlSession mySqlSession;
+    private final String sql;
 
-    public <T> MyMapperProxy(MySqlSession mySqlSession) {
+    public <T> MyMapperProxy(MySqlSession mySqlSession, String sql) {
         this.mySqlSession = mySqlSession;
+        this.sql = sql;
     }
 
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 
-        if (method.getDeclaringClass().getName().equals(PersonMapperXml.nameSpace)) {
-            String sql = PersonMapperXml.methodSqlMapping.get(method.getName());
-            return mySqlSession.selectOne(sql, String.valueOf(args[0]));
-        }
-        return method.invoke(proxy,args);
+//        if (method.getDeclaringClass().getName().equals(PersonMapperXml.nameSpace)) {
+//            String sql = PersonMapperXml.methodSqlMapping.get(method.getName());
+//            return mySqlSession.selectOne(sql, String.valueOf(args[0]));
+//        }
+        return mySqlSession.selectOne(sql, String.valueOf(args[0]));
+//        return method.invoke(proxy,args);
     }
 }
